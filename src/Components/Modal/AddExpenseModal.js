@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../../Css/addexpensemodal.css";
-
+import { useNavigate } from "react-router-dom";
 const AddExpenseModal = ({
   isOpen,
   onClose,
@@ -12,7 +12,7 @@ const AddExpenseModal = ({
   const [expenseType, setExpenseType] = useState("");
   const [amount, setAmount] = useState("");
   const [error, setError] = useState("");
-
+  const navigate = useNavigate();
   const handleAddExpense = () => {
     const validMemberName =
       typeof membername === "string" ? membername : selectedMember;
@@ -41,7 +41,7 @@ const AddExpenseModal = ({
     setExpenseType("");
     setAmount("");
     onClose();
-    
+    navigate("/details");
   };
 
   const handleClose = () => {
