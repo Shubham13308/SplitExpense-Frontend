@@ -41,7 +41,7 @@ const AddExpenseModal = ({
     setExpenseType("");
     setAmount("");
     onClose();
-    window.location.reload();
+    
   };
 
   const handleClose = () => {
