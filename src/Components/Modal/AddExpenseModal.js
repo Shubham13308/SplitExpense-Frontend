@@ -41,7 +41,7 @@ const AddExpenseModal = ({
     setExpenseType("");
     setAmount("");
     onClose();
-    navigate("/details");
+    
   };
 
   const handleClose = () => {
