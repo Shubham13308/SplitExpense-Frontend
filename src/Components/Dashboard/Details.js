@@ -107,6 +107,7 @@ const Details = () => {
       if (response.status === 201) {
         console.log("Expense successfully added:", response.data);
         setFormData((prev) => [...prev, response.data]);
+        window.location.reload();
       } else {
         console.error("Failed to add expense:", response.statusText);
       }
