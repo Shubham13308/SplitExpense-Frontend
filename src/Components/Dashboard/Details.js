@@ -15,12 +15,12 @@ const Details = () => {
   const [openAddMemberModal, setOpenAddMemberModal] = useState(false);
   const [groupname, setGroupName] = useState("");
   const [paydescription,setPayDescription]=useState([])
-  // const [selectedMember, setSelectedMember] = useState(null);
+  
   const [membername,setMemberName]=useState(null);
   const [formData, setFormData] = useState([]);
   const [payAmount, setPayAmount] = useState([]);
   const [tabledata, setTableData] = useState([]);
-  const [isSplit, setIsSplit] = useState(false); // State to control visibility of Pay component
+  const [isSplit, setIsSplit] = useState(false); 
   const navigate = useNavigate();
 
   const fetchData = async () => {
@@ -35,7 +35,7 @@ const Details = () => {
         }
       );
 
-      // console.log("Raw API Response:", response.data.data?.group_name || "");
+      
       const members = response.data?.memberdetails;
       setFormData(Array.isArray(members) ? members : members ? [members] : []);
       setGroupName(response.data.data?.group_name || "");
@@ -97,7 +97,7 @@ const Details = () => {
     
 
     try {
-      // return false
+      
       const response = await axios.post(
         `${url}group/add-expense`,
         payload
