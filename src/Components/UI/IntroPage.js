@@ -11,7 +11,7 @@ const IntroPage = () => {
 
   return (
     <div className="intro-container">
-      <h1 className="intro-title"> to Split Expense</h1>
+      <h1 className="intro-title">Welcome to Split Expense</h1>
       <button className="get-started-btn" onClick={handleGetStarted}>
         Get Started
       </button>
